@@ -1,0 +1,94 @@
+@import "./variables-color.scss";
+
+.project {
+  width: 60%;
+  position: relative;
+  border-radius: 8px;
+  border: 2px solid $first-color;
+  margin: 0 auto 80px;
+}
+
+.project-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  border-radius: 8px 8px 0 0;
+  img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+}
+
+.project-details {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #fff;
+  border-radius: 0 0 8px 8px;
+  z-index: 2;
+  padding: 4px;
+  h2 {
+    font-weight: 700;
+  }
+  p {
+    font-size: 85%;
+  }
+}
+
+.project-links {
+  background-color: $first-color;
+  clip-path: polygon(100% 0, 0% 100%, 100% 100%);
+  width: 50%;
+  height: 75%;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  transform: translate(16px, 16px);
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+  padding-right: 22px;
+  padding-bottom: 22px;
+  z-index: 2;
+  a {
+    color: $second-color;
+    display: flex;
+    align-items: center;
+    line-height: 32px;
+  }
+}
+
+@media (max-width: 576px) {
+  .project {
+    width: 90%;
+  }
+
+  .project-links {
+    padding: 2px;
+    font-size: 12px;
+  }
+}
+
+@media (min-width: 576.5px) and (max-width: 768px) {
+  .project {
+    width: 85%;
+  }
+  .project-links {
+    padding: 2px;
+    font-size: 12px;
+  }
+}
+
+@media (min-width: 768.5px) and (max-width: 922px) {
+  .project {
+    width: 75%;
+  }
+  .project-links {
+    padding: 2px;
+  }
+}

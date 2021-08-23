@@ -1,0 +1,46 @@
+@import "./variables-color.scss";
+
+.heading {
+  width: 100%;
+  min-height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .wrapper-heading-about {
+    min-width: 250px;
+    text-align: center;
+    h1 {
+      text-transform: uppercase;
+      font-weight: 900;
+      &:nth-of-type(1) {
+        margin: 0 auto;
+        color: #2b2b2b;
+        font-size: 115px;
+        line-height: 10px;
+        z-index: 1;
+        @media (max-width: 576px) {
+          font-size: 75px;
+        }
+        @media (min-width: 576.5px) and (max-width: 767.5) {
+          font-size: 85px;
+        }
+      }
+      &:nth-of-type(2) {
+        margin: 0 auto;
+        font-size: 65px;
+        line-height: 0;
+        z-index: 3;
+        color: $four-color;
+        span {
+          color: $first-color;
+        }
+        @media (max-width: 576px) {
+          font-size: 35px;
+        }
+        @media (min-width: 576.5px) and (max-width: 767.5) {
+          font-size: 45px;
+        }
+      }
+    }
+  }
+}

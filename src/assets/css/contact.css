@@ -1,0 +1,20 @@
+.contact {
+  width: 100%;
+  min-height: 300px;
+  line-height: 48px;
+  color: #ffffff;
+  padding: 32px;
+  word-spacing: 4px;
+}
+
+.contact a {
+  margin-left: 4px;
+}
+
+.contact span {
+  margin: 0 8px;
+  color: #ffb400;
+  font-size: 18px;
+  font-weight: 900;
+}
+/*# sourceMappingURL=contact.css.map */

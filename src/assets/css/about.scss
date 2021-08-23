@@ -1,0 +1,23 @@
+@import "./variables-color.scss";
+
+.about {
+  width: 75%;
+  margin: auto;
+  min-height: calc(100vh - 200px);
+  color: $four-color;
+}
+
+.square {
+  min-height: 170px;
+  border: 1px solid rgb(97, 97, 97);
+  text-align: center;
+  padding: 4px;
+  border-radius: 4px;
+}
+
+.num-success {
+  color: $first-color;
+  line-height: 2.5;
+  font-size: 3rem;
+  font-weight: 900;
+}

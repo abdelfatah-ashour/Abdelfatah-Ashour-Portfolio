@@ -1,0 +1,20 @@
+@import "./variables-color.scss";
+
+.contact {
+  width: 100%;
+  min-height: 300px;
+  line-height: 48px;
+  color: $four-color;
+  padding: 32px;
+  word-spacing: 4px;
+  a {
+    margin-left: 4px;
+  }
+
+  span {
+    margin: 0 8px;
+    color: $first-color;
+    font-size: 18px;
+    font-weight: 900;
+  }
+}
