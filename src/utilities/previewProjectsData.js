@@ -17,7 +17,7 @@ const projects = [
   {
     name: "Beats Store",
     description:
-      "BOOM headphone is store build with React.js (Redux-ToolKit) and node.js",
+      "Beats store is store build with React.js (Redux-ToolKit) and node.js",
     github: "https://github.com/abdelfatahashour4/beats-store",
     live: "https://beats-store.vercel.app",
     image: beatsStore,
