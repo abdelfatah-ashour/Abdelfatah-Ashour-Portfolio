@@ -1,12 +1,12 @@
 import React from "react";
-import {AiOutlineGithub} from "react-icons/ai";
-import {BiLinkExternal} from "react-icons/bi";
+import { AiOutlineGithub } from "react-icons/ai";
+import { BiLinkExternal } from "react-icons/bi";
 
-export default function PreviewProjects({project}) {
+export default function PreviewProjects({ project }) {
   return (
     <div className="project" key={project.name}>
       <div className="project-img">
-        <img src={project.image} alt={project.name} loading="lazy" />
+        <img src={project.image} alt={project.name} />
       </div>
       <div className="project-details">
         <h2 className="text-capitalize">{project.name}</h2>

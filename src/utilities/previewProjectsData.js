@@ -1,4 +1,4 @@
-import boomHeadPhone from "../assets/images/BOOM-official.png";
+import beatsStore from "../assets/images/Beats-Store.png";
 import Brakt from "../assets/images/Brakt.png";
 import expressXYou from "../assets/images/express-x-you.png";
 import freedom from "../assets/images/FREEDOM.png";
@@ -15,12 +15,12 @@ const projects = [
     image: Brakt,
   },
   {
-    name: "boom headphone",
+    name: "Beats Store",
     description:
       "BOOM headphone is store build with React.js (Redux-ToolKit) and node.js",
-    github: "https://github.com/abdelfatahashour4/boom-headphone",
-    live: "http://boom-headphone.vercel.app",
-    image: boomHeadPhone,
+    github: "https://github.com/abdelfatahashour4/beats-store",
+    live: "https://beats-store.vercel.app",
+    image: beatsStore,
   },
   {
     name: "freedom",
@@ -55,4 +55,4 @@ const projects = [
   },
 ];
 
-export {projects};
+export { projects };
