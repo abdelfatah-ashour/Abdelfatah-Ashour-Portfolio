@@ -1,0 +1,14 @@
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background: #000000;
+  color: #fff;
+}
+/*# sourceMappingURL=global.css.map */
