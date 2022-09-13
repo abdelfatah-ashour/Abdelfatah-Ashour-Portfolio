@@ -12,7 +12,7 @@ const SideBar = () => (
         <img src={`${PUBLIC_URL}/images/me.jpg`} alt="" />
       </Link>
       <header>
-        <h2>Abdelfatah Ashour Abdelfatah</h2>
+        <h2>Abdelfatah Ashour</h2>
         <p>
           <a href="mailto:abdelfatahashour4@gmail.com">abdelfatahashour4@gmail.com</a>
         </p>
@@ -22,11 +22,8 @@ const SideBar = () => (
     <section className="blurb">
       <h2>About</h2>
       <p>
-        Hi, Abdelfatah Ashour. I like building things. I am a{" "}
-        <a href="https://law.alexu.edu.eg" target="_blank">
-          Alexandria university
-        </a>{" "}
-        graduate.
+        Hi, I'm Abdelfatah Ashour, and I graduated from the University of Alexandria in 2019 with Bachelor’s Degree in
+        law. My interests are in Front End Engineering, I've shifted career as a Frontend Developer in 2019.
       </p>
       <ul className="actions">
         <li>
@@ -45,9 +42,6 @@ const SideBar = () => (
 
     <section id="footer">
       <ContactIcons />
-      {/* <p className="copyright">
-        &copy; Michael D&apos;Angelo <Link to="/">mldangelo.com</Link>.
-      </p> */}
     </section>
   </section>
 );

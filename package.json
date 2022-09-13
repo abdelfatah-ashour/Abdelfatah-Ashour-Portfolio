@@ -1,11 +1,11 @@
 {
   "name": "personal-site",
   "version": "4.0.0",
-  "homepage": "https://mldangelo.com/",
+  "homepage": "https://abdelfatah-ashour-portfolio.vercel.app/",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/mldangelo/personal-site.git"
+    "url": "https://github.com/abdelfatah-ashour/Abdelfatah-Ashour-Portfolio.git"
   },
   "engines": {
     "node": ">=14.x"

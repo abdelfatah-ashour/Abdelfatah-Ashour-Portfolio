@@ -4,11 +4,7 @@ import { Link } from "react-router-dom";
 import Main from "../layouts/Main";
 
 const Index = () => (
-  <Main
-    description={
-      "Abdelfatah Ashour's personal website. New York based Stanford ICME graduate, " +
-      "co-founder and CTO of Arthena, and YC Alumni."
-    }>
+  <Main description={"Abdelfatah Ashour's personal website. Alexandria ,Egypt"}>
     <article className="post" id="index">
       <header>
         <div className="title">

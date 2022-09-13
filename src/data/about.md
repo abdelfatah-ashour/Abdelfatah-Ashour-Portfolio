@@ -1,6 +1,8 @@
 # Intro
 
-I'm working on web development projects since 2021, focusing on front-end, UI, technical solution architecture, responsive design, and animation. With a strong work ethic and communication skills, he has played a key role in product companies and UI/UX designers.
+Hi, I'm Abdelfatah Ashour, and I graduated from the University of Alexandria in 2019 with Bachelor’s Degree in law. My interests are in Front End Engineering, I've shifted career as a Frontend Developer in 2019, And I love to create beautiful and performant products with delightful user experiences.
+
+I previously worked at Flowtechtics, where I led the Krafttopia and port-flash projects. Krafttopia was a service for handmade talents to share products created with handmade.
 
 # Currently
 
@@ -29,22 +31,5 @@ I have learned how to build teams, manage people, shape culture, develop relatio
 - enabling a brighter future.
 - doing better.
 - you not checking the commit history for earlier drafts of this file.
-
-# Websites from people I admire
-
-- [Alex Peysakhovich](http://alexpeys.github.io/)
-- [Chris Lengerich](http://www.chrislengerich.com/)
-- [Chris Saad](https://www.chrissaad.com/)
-- [Duncan Tomlin](http://duncantomlin.com/)
-- [Hawley Moore](http://hawleymoore.com/)
-- [Holman Gao](https://golmansax.com/)
-- [Ian Webster](http://ianww.com/)
-- [Johanna Flato](https://www.johannaflato.com/)
-- [Judy Mou](http://www.judymou.com/)
-- [Kristina Monakhova](https://kristinamonakhova.com/)
-- [Noah Trueblood](http://notrueblood.com/)
-- [Ruoxi Wang](http://ruoxiw.com/)
-- [Tom Sachs](https://www.tomsachs.org/)
-- [Will Holley](https://willholley.com)
 
 If we are friends and you feel like you belong on this list, you're probably right. I'm sorry I forgot about you. Pester me and I'll add you.

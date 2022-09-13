@@ -7,7 +7,7 @@ import Personal from "../components/Stats/Personal";
 import Site from "../components/Stats/Site";
 
 const Stats = () => (
-  <Main title="Stats" description="Some statistics about Michael D'Angelo and mldangelo.com">
+  <Main title="Stats" description="Some statistics about Abdelfatah Ashour">
     <article className="post" id="stats">
       <header>
         <div className="title">
