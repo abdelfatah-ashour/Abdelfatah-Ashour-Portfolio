@@ -196,6 +196,13 @@
 
 	#header .index-link {
 		z-index: 3;
+		display: flex;
+		justify-content: center;
+		padding: 4px;
+		margin: 0 auto;
+		img {
+			width: 100%;
+		}
 	}
 
 	#header .main .menu {
