@@ -27,6 +27,7 @@ const About = () => (
           <p>(in about {count} words)</p>
         </div>
       </header>
+
       <ReactMarkdown
         source={markdown}
         renderers={{
