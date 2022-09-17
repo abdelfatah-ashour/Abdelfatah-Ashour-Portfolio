@@ -1,42 +1,41 @@
-import { faGithub } from "@fortawesome/free-brands-svg-icons/faGithub";
-import { faFacebookF } from "@fortawesome/free-brands-svg-icons/faFacebookF";
-import { faInstagram } from "@fortawesome/free-brands-svg-icons/faInstagram";
-import { faLinkedinIn } from "@fortawesome/free-brands-svg-icons/faLinkedinIn";
-import { faTwitter } from "@fortawesome/free-brands-svg-icons/faTwitter";
-import { faEnvelope } from "@fortawesome/free-regular-svg-icons/faEnvelope";
-// See https://fontawesome.com/icons?d=gallery&s=brands,regular&m=free
-// to add other icons.
+import { FaFacebookF, FaInstagram, FaGithub, FaLinkedinIn, FaTwitter } from "react-icons/fa";
+import { SiGmail, SiUpwork } from "react-icons/si";
 
 const data = [
   {
     link: "https://github.com/abdelfatah-ashour",
     label: "Github",
-    icon: faGithub,
+    Icon: FaGithub,
   },
   {
     link: "https://www.facebook.com/abdelfatahashour7",
     label: "Facebook",
-    icon: faFacebookF,
+    Icon: FaFacebookF,
   },
   {
-    link: "https://www.instagram.com/",
+    link: "https://www.instagram.com/abdelfattah__ashour",
     label: "Instagram",
-    icon: faInstagram,
+    Icon: FaInstagram,
   },
   {
     link: "https://www.linkedin.com/in/abdelfatah-ashour",
     label: "LinkedIn",
-    icon: faLinkedinIn,
+    Icon: FaLinkedinIn,
   },
   {
     link: "https://twitter.com/abdoashour07",
     label: "Twitter",
-    icon: faTwitter,
+    Icon: FaTwitter,
   },
   {
     link: "mailto:abdelfatahashour4@gmail.com",
     label: "Email",
-    icon: faEnvelope,
+    Icon: SiGmail,
+  },
+  {
+    link: "https://www.upwork.com/freelancers/~0146ebe1c16dd6c829",
+    label: "Upwork",
+    Icon: SiUpwork,
   },
 ];
 

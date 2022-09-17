@@ -1,5 +1,5 @@
 import React from "react";
-
+import UpworkIcon from "../../static/svg/upwork.svg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import data from "../../data/contact";
@@ -9,7 +9,7 @@ const ContactIcons = () => (
     {data.map(s => (
       <li key={s.label}>
         <a href={s.link} target="_blank">
-          <FontAwesomeIcon icon={s.icon} />
+          <s.Icon />
         </a>
       </li>
     ))}

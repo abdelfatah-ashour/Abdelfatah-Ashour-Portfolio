@@ -3,7 +3,7 @@ const data = [
   {
     title: "Krafttopia",
     subtitle: "E-commerce web application and panels dashboard they're build with React JS",
-    link: "https://devpost.com/software/harvest",
+    link: "https://krafttopia.com",
     image: "/projects/krafttopia.png",
     date: "2022-4-1",
     desc:
@@ -14,7 +14,7 @@ const data = [
   {
     title: "Port-flash",
     subtitle: "shipping web application and panels dashboard they're build with React JS",
-    link: "https://devpost.com/software/harvest",
+    link: "https://www.port-flash.online",
     image: "/projects/port-flash-online.png",
     date: "2022-6-1",
     desc:
@@ -25,7 +25,7 @@ const data = [
   {
     title: "Sola",
     subtitle: "Real-time Chat application build with React and Socket-io",
-    link: "http://www.spacepotato.org",
+    link: "https://sola.vercel.app/",
     image: "/projects/sola.png",
     date: "2021-12-1",
     desc: "Sola is similar to chat features in that it gives you the ability to send instant messages to others in an organization. More specifically, group chat is the ability to chat with multiple people. Using a secure group chat platform, teams within your business can dynamically share information and ideas.",
@@ -33,6 +33,7 @@ const data = [
   {
     title: "Express X You",
     subtitle: "E-commerce web application and panels dashboard build with Next JS",
+    link: "https://express-x-you.vercel.app",
     image: "/projects/express-x-you.png",
     date: "2021-05-1",
     desc:
@@ -42,6 +43,7 @@ const data = [
   {
     title: "Freedom",
     subtitle: "Blog's web application build with Next JS",
+    link: "https://freedom-blogs.vercel.app",
     image: "/projects/freedom-blogs.png",
     date: "2021-10-15",
     desc:
