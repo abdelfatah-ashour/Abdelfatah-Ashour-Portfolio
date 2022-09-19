@@ -15,7 +15,6 @@ I have learned how to build teams, manage people, shape culture, develop relatio
 - Sailing and the sea
 - Space
 - Winter
-- [Good design](/)
 
 # Fun facts
 
