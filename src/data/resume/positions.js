@@ -1,7 +1,7 @@
 const positions = [
   {
     company: "Flowtechtics",
-    position: "Junior Frontend Developer",
+    position: "Frontend Developer",
     link: "https://flowtechtics.com/",
     daterange: "October 2021 - Present",
     points: [
@@ -14,7 +14,7 @@ const positions = [
   },
   {
     company: "Remotely [part-time]",
-    position: "Junior Frontend Developer",
+    position: "Frontend Developer",
     link: "",
     daterange: "June 2022 – August 2022",
     points: [
