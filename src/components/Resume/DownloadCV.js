@@ -11,7 +11,7 @@ const DownloadCV = () => (
       <h4>
         This resume include brief about me:
         <a
-          href="/download/Abdelfatah-Ashour-Resume-Frontend-Developer.pdf"
+          href="/download/Abdelfatah-Ashour-Frontend-Developer-resume.pdf"
           download
           style={{
             marginLeft: "10px",
