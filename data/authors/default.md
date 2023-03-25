@@ -12,6 +12,4 @@ github: https://github.com/abdelfatah-ashour
 
 A Frontend Engineer who values learning and growing with people, teams, and technologies.
 
-## INTRO
-
 I graduated from the University of Alexandria in 2019 with Bachelor’s Degree in law. My interests are in Front End Engineering, I've shifted career as a Frontend Developer in 2019, And I love to create beautiful and performant products with delightful user experiences.

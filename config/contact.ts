@@ -15,8 +15,8 @@ export interface Contact {
 
 export const contact: Contact = {
   twitter: "@abdoashour07",
-  site: "karanpratapsingh.com",
-  calendly: "https://abdelfatah-ashour-portfolio.vercel.app/",
+  site: "https://abdelfatah-ashour-portfolio.vercel.app/",
+  calendly: "https://calendly.com/abdelfatahashour",
   links: {
     github: "https://github.com/abdelfatah-ashour",
     linkedin: "https://www.linkedin.com/in/abdelfatah-ashour",

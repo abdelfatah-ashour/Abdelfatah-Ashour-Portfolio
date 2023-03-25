@@ -19,6 +19,9 @@ export enum Stack {
   // Tools
   CSS,
   bootstrap,
+  materialui,
+  tailwindcss,
+  styledcomponent,
   firebase,
 }
 
@@ -30,6 +33,9 @@ export const WorkStack = [
   Stack.CSS,
   Stack.bootstrap,
   Stack.firebase,
+  Stack.materialui,
+  Stack.tailwindcss,
+  Stack.styledcomponent,
 ];
 
 type StackInfoMap = {
@@ -79,6 +85,18 @@ export const StackInfo: Record<Stack, StackInfoMap> = {
   },
   [Stack.firebase]: {
     value: "Firebase Cloud Functions",
+    color: Colors.terraform,
+  },
+  [Stack.materialui]: {
+    value: "Material UI",
+    color: Colors.terraform,
+  },
+  [Stack.tailwindcss]: {
+    value: "Tailwind CSS",
+    color: Colors.terraform,
+  },
+  [Stack.styledcomponent]: {
+    value: "Styled Components",
     color: Colors.terraform,
   },
 };
