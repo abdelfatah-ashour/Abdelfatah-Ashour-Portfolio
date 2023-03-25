@@ -7,7 +7,9 @@ export enum Stack {
 
   // Frontend
   react,
+  nextjs,
   reactnative,
+  SASS,
 
   // Backend
   graphql,
@@ -23,6 +25,8 @@ export enum Stack {
   tailwindcss,
   styledcomponent,
   firebase,
+  pusherjs,
+  redux,
 }
 
 export const WorkStack = [
@@ -79,24 +83,40 @@ export const StackInfo: Record<Stack, StackInfoMap> = {
     value: 'CSS',
     color: Colors.terraform,
   },
+  [Stack.SASS]: {
+    value: 'Sass',
+    color: Colors.sass,
+  },
   [Stack.bootstrap]: {
     value: 'Bootstrap 5',
-    color: Colors.terraform,
+    color: Colors.bootstrap,
   },
   [Stack.firebase]: {
     value: 'Firebase Cloud Functions',
-    color: Colors.terraform,
+    color: Colors.firebase,
   },
   [Stack.materialui]: {
     value: 'Material UI',
-    color: Colors.terraform,
+    color: Colors.materialui,
   },
   [Stack.tailwindcss]: {
     value: 'Tailwind CSS',
-    color: Colors.terraform,
+    color: Colors.tailwindcss,
   },
   [Stack.styledcomponent]: {
     value: 'Styled Components',
-    color: Colors.terraform,
+    color: Colors.styledcomponent,
+  },
+  [Stack.pusherjs]: {
+    value: 'Pusher JS',
+    color: Colors.pusherjs,
+  },
+  [Stack.redux]: {
+    value: 'Redux',
+    color: Colors.redux,
+  },
+  [Stack.nextjs]: {
+    value: 'Next JS',
+    color: Colors.nextjs,
   },
 };

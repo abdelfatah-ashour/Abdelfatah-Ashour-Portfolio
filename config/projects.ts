@@ -42,13 +42,24 @@ export const projects: Project[] = [
     shortDescription:
       'Ready to deploy, distributed cryptocurrency trading bot.',
     repository: '',
-    stack: [Stack.react, Stack.typescript, Stack.CSS, Stack.firebase],
+    stack: [
+      Stack.node,
+      Stack.nextjs,
+      Stack.react,
+      Stack.redux,
+      Stack.javascript,
+      Stack.pusherjs,
+      Stack.CSS,
+      Stack.SASS,
+      Stack.bootstrap,
+    ],
     dimensions: [360, 640],
     screenshots: [
+      '/static/projects/thiqeel/screens/12.png',
+      '/static/projects/thiqeel/screens/4.png',
       '/static/projects/thiqeel/screens/1.png',
       '/static/projects/thiqeel/screens/2.png',
       '/static/projects/thiqeel/screens/3.png',
-      '/static/projects/thiqeel/screens/4.png',
       '/static/projects/thiqeel/screens/5.png',
       '/static/projects/thiqeel/screens/6.png',
       '/static/projects/thiqeel/screens/7.png',
@@ -56,7 +67,6 @@ export const projects: Project[] = [
       '/static/projects/thiqeel/screens/9.png',
       '/static/projects/thiqeel/screens/10.png',
       '/static/projects/thiqeel/screens/11.png',
-      '/static/projects/thiqeel/screens/12.png',
     ],
     deployment: {
       web: 'https://krafttopia.com/',
@@ -73,7 +83,14 @@ export const projects: Project[] = [
     shortDescription:
       'Ready to deploy, distributed cryptocurrency trading bot.',
     repository: '',
-    stack: [Stack.react, Stack.typescript, Stack.CSS, Stack.firebase],
+    stack: [
+      Stack.react,
+      Stack.typescript,
+      Stack.SASS,
+      Stack.firebase,
+      Stack.node,
+      Stack.materialui,
+    ],
     dimensions: [360, 640],
     screenshots: [
       '/static/projects/port-flash/screens/4.png',
@@ -99,7 +116,14 @@ export const projects: Project[] = [
     shortDescription:
       'Ready to deploy, distributed cryptocurrency trading bot.',
     repository: '',
-    stack: [Stack.react, Stack.typescript, Stack.CSS, Stack.firebase],
+    stack: [
+      Stack.react,
+      Stack.typescript,
+      Stack.SASS,
+      Stack.firebase,
+      Stack.node,
+      Stack.materialui,
+    ],
     dimensions: [360, 640],
     screenshots: [
       '/static/projects/krafttopia/screens/1.png',

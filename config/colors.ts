@@ -1,34 +1,30 @@
 export const Colors = {
   // Languages
-  go: '#00ADD8',
-  python: '#4B8BBE',
-  typescript: '#234A84',
-  javascript: '#F7DF1E',
+  typescript: '#3178c6',
+  javascript: '#f7df1e',
 
   // Frontend
   web: '#2D2D2D',
-  react: '#61DAF6',
+  react: '#00d8ff',
   nextjs: '#000000',
 
   // Backend
-  graphql: '#E535AB',
-  node: '#68A063',
+  graphql: '#da1884',
+  node: '#215732',
   django: '#092E20',
 
   // Tools, Libs
   webpack: '#8DD6F9',
   babel: '#F5DB53',
-  redux: '#764ABC',
+  redux: '#511378',
 
   // Mobile
-  reactnative: '#2D2D2D',
-  android: '#56A036',
-  ios: '#0C76E2',
+  reactnative: '#00bce4',
+  android: '#a4c639',
+  ios: '#8e8e93',
 
   // Databases
-  arangodb: '#68A063',
-  postgres: '#336791',
-  mongo: '#4DB33D',
+  mongo: '#589636',
   redis: '#D82C20',
 
   // Cloud
@@ -38,16 +34,12 @@ export const Colors = {
   kubernetes: '#326CE5',
   terraform: '#7B42BC',
 
-  // Messaging
-  nats: '#199bfc',
-  kafka: '#000000',
-
   // Social
-  linkedin: '#0077B5',
-  twitter: '#1DA1F2',
-  youtube: '#FF0000',
-  email: '#D44638',
-  buymeacoffee: '#FFDD00',
+  linkedin: '#0a66c2',
+  twitter: '#1da1f2',
+  youtube: '#ff0000',
+  email: '#dd4b39',
+  buymeacoffee: '#feba02',
   reddit: '#ff4500',
   facebook: '#1877f2',
 
@@ -63,4 +55,11 @@ export const Colors = {
   resume: '#EEEBFF',
   opensource: '#26BE00',
   tutorial: '#4dd0e1',
+  sass: '#CC6699',
+  bootstrap: '#7952B3',
+  firebase: '#FFCA28',
+  materialui: '#0081CB',
+  tailwindcss: '#38B2AC',
+  styledcomponent: '#DB7093',
+  pusherjs: '#ED1965',
 };
