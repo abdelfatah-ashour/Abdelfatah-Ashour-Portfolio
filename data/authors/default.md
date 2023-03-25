@@ -1,15 +1,18 @@
 ---
-name: Abdelfatah Ashour
-shortname: Abdelfatah
-avatar: /static/avatar.jpeg
-occupation: Frontend Engineer
-resume: /static/abdelfatah-ashour-resume.pdf
-email: abdelfatahashour4@gmail.com
-twitter: https://twitter.com/abdoashour07
-linkedin: https://www.linkedin.com/in/abdelfatah-ashour
-github: https://github.com/abdelfatah-ashour
+name: Karan Pratap Singh
+shortname: Karan
+avatar: /static/avatar.jpg
+occupation: Software Engineer
+company: Curebase
+resume: /static/Karan_Resume.pdf
+email: contact@karanpratapsingh.com
+twitter: https://twitter.com/karan_6864
+linkedin: https://www.linkedin.com/in/karan99
+github: https://github.com/karanpratapsingh
 ---
 
-A Frontend Engineer who values learning and growing with people, teams, and technologies.
+A software engineer who values learning and growing with people, teams, and technologies.
 
-I graduated from the University of Alexandria in 2019 with Bachelor’s Degree in law. My interests are in Front End Engineering, I've shifted career as a Frontend Developer in 2019, And I love to create beautiful and performant products with delightful user experiences.
+Presently, I am working as a Software Engineer at [Curebase](https://www.curebase.com) where I am helping to build a decentralized clinical trial platform while scaling infrastructure with a focus on security, HIPAA, and GDPR compliance.
+
+Previously I've worked with the Digitization Program Office (DPO) at the [Smithsonian Institution](https://www.si.edu) as a consulting Full Stack Engineer in collaboration with the Office of the Chief Information Officer (OCIO).

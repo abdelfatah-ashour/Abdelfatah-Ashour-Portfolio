@@ -1,12 +1,19 @@
-import clsx from "clsx";
-import { Colors } from "config/colors";
-import { contact, ContactType } from "config/contact";
-import React, { memo } from "react";
-import { IconBaseProps } from "react-icons";
-import { FaLinkedinIn as LinkedinIcon } from "react-icons/fa";
-import { IoLogoGithub as GithubIcon, IoLogoTwitter as TwitterIcon } from "react-icons/io";
-import { SiBuymeacoffee as BuymeacoffeeIcon, SiGmail as MailIcon, SiYoutube as YoutubeIcon } from "react-icons/si";
-import { Maybe, Tuple } from "types";
+import clsx from 'clsx';
+import { Colors } from 'config/colors';
+import { contact, ContactType } from 'config/contact';
+import React, { memo } from 'react';
+import { IconBaseProps } from 'react-icons';
+import { FaLinkedinIn as LinkedinIcon } from 'react-icons/fa';
+import {
+  IoLogoGithub as GithubIcon,
+  IoLogoTwitter as TwitterIcon,
+} from 'react-icons/io';
+import {
+  SiBuymeacoffee as BuymeacoffeeIcon,
+  SiGmail as MailIcon,
+  SiYoutube as YoutubeIcon,
+} from 'react-icons/si';
+import { Maybe, Tuple } from 'types';
 
 interface SocialIconsProps {
   className?: string;
@@ -16,7 +23,7 @@ function SocialIcons(props: SocialIconsProps): React.ReactElement {
   const { className } = props;
 
   return (
-    <div className={clsx("mt-2 flex", className)}>
+    <div className={clsx('mt-2 flex', className)}>
       {React.Children.toArray(Object.entries(contact.links).map(resolveIcon))}
     </div>
   );
@@ -26,7 +33,7 @@ function resolveIcon(entry: Tuple<string>): React.ReactNode {
   const [type, url] = entry;
 
   const props: IconBaseProps = {
-    className: "icon cursor-pointer text-2xl mr-6",
+    className: 'icon cursor-pointer text-2xl mr-6',
     color: Colors[type],
   };
 
@@ -45,6 +52,10 @@ function resolveIcon(entry: Tuple<string>): React.ReactNode {
       icon = <GithubIcon {...props} />;
       break;
 
+    case ContactType.youtube:
+      icon = <YoutubeIcon {...props} />;
+      break;
+
     case ContactType.email:
       icon = <MailIcon {...props} />;
       break;
@@ -57,7 +68,13 @@ function resolveIcon(entry: Tuple<string>): React.ReactNode {
   }
 
   return (
-    <a className="social-icons" href={url} aria-label={type} target="_blank" rel="noopener noreferrer">
+    <a
+      className='social-icons'
+      href={url}
+      aria-label={type}
+      target='_blank'
+      rel='noopener noreferrer'
+    >
       {icon}
     </a>
   );

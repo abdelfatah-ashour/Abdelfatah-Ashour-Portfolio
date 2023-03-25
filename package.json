@@ -3,11 +3,14 @@
   "version": "5.0.0",
   "private": true,
   "scripts": {
+    "start": "cross-env SOCKET=true node ./scripts/next-remote-watch.js ./data",
     "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
+    "build": "next build && node ./scripts/generate-sitemap",
+    "serve": "next start",
     "analyze": "cross-env ANALYZE=true next build",
-    "lint": "prettier --write ."
+    "lint": "prettier --write .",
+    "prepare": "husky install",
+    "preview": "npm run build && npm run serve"
   },
   "dependencies": {
     "@fontsource/fira-code": "^4.5.8",
