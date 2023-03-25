@@ -25,7 +25,7 @@ import rehypeSlug from 'rehype-slug';
 
 const root = process.cwd();
 
-export function getFiles(type: 'blog' | 'authors' | 'courses') {
+export function getFiles(type: 'blog' | 'authors') {
   const prefixPaths = path.join(root, 'data', type);
   const files = getAllFilesRecursively(prefixPaths);
   // Only want to return blog/path and ignore root, replace is needed to work on Windows
@@ -45,7 +45,7 @@ export function dateSortDesc(a: string, b: string) {
 }
 
 export async function getFileBySlug<T>(
-  type: 'authors' | 'blog' | 'courses',
+  type: 'authors' | 'blog',
   slug: string | string[],
 ) {
   const mdxPath = path.join(root, 'data', type, `${slug}.mdx`);
@@ -125,7 +125,7 @@ export async function getFileBySlug<T>(
   };
 }
 
-export async function getAllFilesFrontMatter(folder: 'blog' | 'courses') {
+export async function getAllFilesFrontMatter(folder: 'blog') {
   const prefixPaths = path.join(root, 'data', folder);
 
   const files = getAllFilesRecursively(prefixPaths);
