@@ -1,0 +1,116 @@
+---
+title: 'Write unit and integration tests for your react component'
+date: '2023-03-14'
+tags: ['unit testing', 'integration tests', 'react', 'testing-library']
+draft: false
+summary: 'Learn how to Write unit and integration tests for your react component'
+images:
+  [
+    '/static/blogs/write-unit-and-integration-tests-for-your-react-component.png',
+  ]
+authors: ['default']
+---
+
+### Introduction
+
+<p>
+  React.js is a popular front-end library for building web applications. As
+  applications become more complex, it's important to ensure that they are
+  thoroughly tested. Testing in React can be broken down into two main
+  categories: unit testing and integration testing. In this article, we will
+  explore the basics of unit and integration testing in React using the Testing
+  Library, and provide some examples of how to implement these tests.
+</p>
+<p>Unit Testing in React</p>
+<p>
+  Unit testing is the process of testing individual units or components of an
+  application in isolation to ensure they are working correctly. In React, these
+  units are typically individual components. Unit testing can be done using
+  various testing frameworks, but in this article, we will be using the Testing
+  Library, which provides a set of utilities for testing React components.
+</p>
+
+<p>
+  To begin unit testing with Testing Library, we need to install it as a dev
+  dependency in our project:
+</p>
+
+```bash
+ npm install --save-dev @testing-library/react
+```
+
+<p>
+  Once we have installed Testing Library, we can start writing our unit tests.
+  Here's an example of a basic unit test for a React component:
+</p>
+
+```js
+import { render, screen } from '@testing-library/react';
+import MyComponent from './MyComponent';
+
+describe('MyComponent', () => {
+  test('renders a heading with the correct text', () => {
+    render(<MyComponent />);
+    const heading = screen.getByRole('heading', { name: /Hello, world!/i });
+    expect(heading).toBeInTheDocument();
+  });
+});
+```
+
+<p>
+  In this test, we are rendering the <mark>MyComponent</mark> component and then
+  using the screen object provided by Testing Library to query for a heading
+  element with the text "Hello, world!". We then use the expect function to
+  assert that the heading is in the document.
+</p>
+
+<p>Integration Testing in React</p>
+
+<p>
+  Integration testing is the process of testing how different parts of an
+  application work together. In React, this typically involves testing how
+  multiple components interact with each other. Integration testing can be more
+  complex than unit testing, as it involves testing the application as a whole
+  rather than individual components.
+</p>
+
+<p>
+  To begin integration testing with Testing Library, we can use the same
+  utilities that we used for unit testing, but we will need to render the entire
+  application rather than just a single component. Here's an example of a basic
+  integration test for a React application:
+</p>
+
+```js
+import { render, screen } from '@testing-library/react';
+import App from './App';
+
+describe('App', () => {
+  test('renders a heading with the correct text', () => {
+    render(<App />);
+    const heading = screen.getByRole('heading', { name: /My React App/i });
+    expect(heading).toBeInTheDocument();
+  });
+
+  test('renders a list of items', () => {
+    render(<App />);
+    const items = screen.getAllByRole('listitem');
+    expect(items.length).toBe(3);
+  });
+});
+```
+
+In this test, we are rendering the App component, which is the top-level component in our React application. We then use the screen object to query for a heading element with the text "My React App" and a list of items. We use the expect function to assert that these elements are in the document, and that the list contains three items.
+
+### Conclusion
+
+<p>
+  In this article, we've explored the basics of unit and integration testing in
+  React using the Testing Library. Unit testing is the process of testing
+  individual components in isolation, while integration testing involves testing
+  how different components work together. By using Testing Library, we can
+  easily write tests for our React applications and ensure that they are working
+  correctly. With a solid understanding of these testing concepts and the
+  ability to implement them in your React projects, you can ensure that your
+  applications are reliable and performant.
+</p>
