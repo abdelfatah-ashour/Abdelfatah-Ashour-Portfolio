@@ -62,6 +62,7 @@ export default function PostLayout({
                     <Link
                       href={`/blog/${prev.slug}`}
                       className='text-primary-500 hover:text-primary-600 dark:hover:text-primary-400'
+                      title={prev.title}
                     >
                       &larr; {prev.title}
                     </Link>
@@ -72,6 +73,7 @@ export default function PostLayout({
                     <Link
                       href={`/blog/${next.slug}`}
                       className='text-primary-500 hover:text-primary-600 dark:hover:text-primary-400'
+                      title={next.title}
                     >
                       {next.title} &rarr;
                     </Link>

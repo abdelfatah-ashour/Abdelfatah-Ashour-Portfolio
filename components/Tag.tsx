@@ -10,6 +10,7 @@ const Tag = ({ text }: Props) => {
     <Link
       className='mt-1 mr-3 text-sm font-medium uppercase text-primary-500 hover:text-primary-600 dark:hover:text-primary-400'
       href={`/tags/${kebabCase(text)}`}
+      title={text.split(' ').join('-')}
     >
       {text.split(' ').join('-')}
     </Link>

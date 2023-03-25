@@ -113,6 +113,10 @@ export default function PostLayout({
                             <Link
                               href={author.twitter}
                               className='text-primary-500 hover:text-primary-600 dark:hover:text-primary-400'
+                              title={author.twitter.replace(
+                                'https://twitter.com/',
+                                '@',
+                              )}
                             >
                               {author.twitter.replace(
                                 'https://twitter.com/',
@@ -163,7 +167,10 @@ export default function PostLayout({
                             Previous Article
                           </h2>
                           <div className='text-primary-500 hover:text-primary-600 dark:hover:text-primary-400'>
-                            <Link href={`/blog/${prev.slug}`}>
+                            <Link
+                              href={`/blog/${prev.slug}`}
+                              title={prev.title}
+                            >
                               {prev.title}
                             </Link>
                           </div>
@@ -175,7 +182,10 @@ export default function PostLayout({
                             Next Article
                           </h2>
                           <div className='text-primary-500 hover:text-primary-600 dark:hover:text-primary-400'>
-                            <Link href={`/blog/${next.slug}`}>
+                            <Link
+                              href={`/blog/${next.slug}`}
+                              title={next.title}
+                            >
                               {next.title}
                             </Link>
                           </div>
@@ -188,6 +198,7 @@ export default function PostLayout({
                   <Link
                     href='/blog'
                     className='text-primary-500 hover:text-primary-600 dark:hover:text-primary-400'
+                    title={`Back to the blog`}
                   >
                     &larr; Back to the blog
                   </Link>

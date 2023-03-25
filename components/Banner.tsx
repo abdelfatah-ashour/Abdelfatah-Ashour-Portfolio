@@ -22,7 +22,11 @@ function Banner(props: BannerProps): React.ReactElement {
       </p>
       <p className='font-light lg:text-xl'>
         Read more
-        <Link className='ml-2 mr-2 font-normal text-black' href='/about'>
+        <Link
+          className='ml-2 mr-2 font-normal text-black'
+          href='/about'
+          title='about me'
+        >
           <RoughNotation
             show
             type='highlight'
@@ -34,7 +38,11 @@ function Banner(props: BannerProps): React.ReactElement {
           </RoughNotation>
         </Link>
         or
-        <Link className='ml-2 font-normal text-black' href='/contact'>
+        <Link
+          className='ml-2 font-normal text-black'
+          href='/contact'
+          title='contact me'
+        >
           <RoughNotation
             show
             type='highlight'
