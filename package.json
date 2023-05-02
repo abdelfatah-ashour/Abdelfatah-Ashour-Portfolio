@@ -5,7 +5,8 @@
   "scripts": {
     "start": "cross-env SOCKET=true node ./scripts/next-remote-watch.js ./data",
     "dev": "next dev",
-    "build": "next build && node ./scripts/generate-sitemap",
+    "build": "next build",
+    "postbuild": "next-sitemap",
     "serve": "next start",
     "analyze": "cross-env ANALYZE=true next build",
     "lint": "prettier --write .",
@@ -28,6 +29,7 @@
     "image-size": "1.0.0",
     "mdx-bundler": "^8.0.0",
     "next": "12.1.5",
+    "next-sitemap": "4.0.9",
     "next-themes": "^0.0.14",
     "postcss": "^8.4.5",
     "preact": "^10.6.2",
