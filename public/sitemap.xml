@@ -1,23 +1,4 @@
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
-<url><loc>https://abdelfatah-ashour.vercel.app</loc><lastmod>2023-05-03T09:57:57.169Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://abdelfatah-ashour.vercel.app/about</loc><lastmod>2023-05-03T09:57:57.169Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://abdelfatah-ashour.vercel.app/blog</loc><lastmod>2023-05-03T09:57:57.169Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://abdelfatah-ashour.vercel.app/contact</loc><lastmod>2023-05-03T09:57:57.169Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://abdelfatah-ashour.vercel.app/projects</loc><lastmod>2023-05-03T09:57:57.169Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://abdelfatah-ashour.vercel.app/tags</loc><lastmod>2023-05-03T09:57:57.169Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://abdelfatah-ashour.vercel.app/projects/thiqeel</loc><lastmod>2023-05-03T09:57:57.169Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://abdelfatah-ashour.vercel.app/projects/portflash</loc><lastmod>2023-05-03T09:57:57.169Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://abdelfatah-ashour.vercel.app/projects/krafttopia</loc><lastmod>2023-05-03T09:57:57.169Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://abdelfatah-ashour.vercel.app/blog/architecture-to-build-UI-framework-using-Sass</loc><lastmod>2023-05-03T09:57:57.169Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://abdelfatah-ashour.vercel.app/blog/what-about-web-assembly</loc><lastmod>2023-05-03T09:57:57.169Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://abdelfatah-ashour.vercel.app/blog/what-is-strategy-for-legacy-code-and-how-to-starting</loc><lastmod>2023-05-03T09:57:57.169Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://abdelfatah-ashour.vercel.app/blog/write-unit-and-integration-tests-for-your-react-component</loc><lastmod>2023-05-03T09:57:57.169Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://abdelfatah-ashour.vercel.app/tags/web</loc><lastmod>2023-05-03T09:57:57.169Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://abdelfatah-ashour.vercel.app/tags/sass</loc><lastmod>2023-05-03T09:57:57.169Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://abdelfatah-ashour.vercel.app/tags/web-assembly</loc><lastmod>2023-05-03T09:57:57.169Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://abdelfatah-ashour.vercel.app/tags/unit-testing</loc><lastmod>2023-05-03T09:57:57.169Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://abdelfatah-ashour.vercel.app/tags/integration-tests</loc><lastmod>2023-05-03T09:57:57.169Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://abdelfatah-ashour.vercel.app/tags/react</loc><lastmod>2023-05-03T09:57:57.169Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://abdelfatah-ashour.vercel.app/tags/testing-library</loc><lastmod>2023-05-03T09:57:57.169Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://abdelfatah-ashour.vercel.app/blog/page/1</loc><lastmod>2023-05-03T09:57:57.169Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-</urlset>
+<?xml version="1.0" encoding="UTF-8"?>
+<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<sitemap><loc>https://abdelfatah-ashour.vercel.app/sitemap-0.xml</loc></sitemap>
+</sitemapindex>
