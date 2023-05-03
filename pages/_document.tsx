@@ -51,6 +51,10 @@ class MyDocument extends Document {
           <meta name='msapplication-TileColor' content='#000000' />
           <meta name='theme-color' content='#000000' />
           <link rel='alternate' type='application/rss+xml' href='/feed.xml' />
+          <meta
+            name='msvalidate.01'
+            content='147AE2027184B1EAC357E4CA1551A852'
+          />
         </Head>
         <body className='bg-white text-black antialiased dark:bg-gray-900 dark:text-white'>
           <Main />
