@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://abdelfatah-ashour.vercel.app/
+
+# Sitemaps
+Sitemap: https://abdelfatah-ashour.vercel.app/sitemap.xml
