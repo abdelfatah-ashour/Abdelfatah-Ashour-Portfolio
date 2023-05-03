@@ -55,6 +55,12 @@ class MyDocument extends Document {
             name='msvalidate.01'
             content='147AE2027184B1EAC357E4CA1551A852'
           />
+
+          {/* google sitemap console  */}
+          <meta
+            name='google-site-verification'
+            content='mcywLINAAiv4Y_3FPHlOOGJwSvt99FrxEOkT8Ocz0yY'
+          />
         </Head>
         <body className='bg-white text-black antialiased dark:bg-gray-900 dark:text-white'>
           <Main />
