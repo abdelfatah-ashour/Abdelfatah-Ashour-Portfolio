@@ -3,7 +3,7 @@ name: Abdelfatah Ashour
 shortname: Abdelfatah
 avatar: /static/avatar.jpeg
 occupation: Frontend Engineer
-resume: /static/Abdelfatah-Ashour-resume.pdf
+resume: /static/Abdelfatah_Ashour_Resume.pdf
 email: abdelfatahashour4@gmail.com
 twitter: https://twitter.com/abdoashour07
 linkedin: https://www.linkedin.com/in/abdelfatah-ashour
