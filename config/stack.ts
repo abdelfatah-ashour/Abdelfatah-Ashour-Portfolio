@@ -20,6 +20,7 @@ export enum Stack {
 
   // Tools
   CSS,
+  HTML,
   bootstrap,
   materialui,
   tailwindcss,
@@ -27,19 +28,26 @@ export enum Stack {
   firebase,
   pusherjs,
   redux,
+
+  // deployment
+  docker,
 }
 
 export const WorkStack = [
+  Stack.HTML,
+  Stack.CSS,
+  Stack.javascript,
   Stack.typescript,
   Stack.react,
-  Stack.graphql,
+  Stack.nextjs,
   Stack.reactnative,
-  Stack.CSS,
+  Stack.graphql,
   Stack.bootstrap,
   Stack.firebase,
   Stack.materialui,
   Stack.tailwindcss,
   Stack.styledcomponent,
+  Stack.docker,
 ];
 
 type StackInfoMap = {
@@ -56,20 +64,23 @@ export const StackInfo: Record<Stack, StackInfoMap> = {
     value: 'JavaScript',
     color: Colors.javascript,
   },
-
   [Stack.react]: {
-    value: 'React',
+    value: 'React.js',
     color: Colors.react,
+  },
+  [Stack.nextjs]: {
+    value: 'Next.js',
+    color: Colors.nextjs,
   },
   [Stack.reactnative]: {
     value: 'React Native',
     color: Colors.reactnative,
   },
+
   [Stack.graphql]: {
     value: 'GraphQL',
     color: Colors.graphql,
   },
-
   [Stack.node]: {
     value: 'Node',
     color: Colors.node,
@@ -78,6 +89,10 @@ export const StackInfo: Record<Stack, StackInfoMap> = {
   [Stack.mongo]: {
     value: 'MongoDB',
     color: Colors.mongo,
+  },
+  [Stack.HTML]: {
+    value: 'HTML',
+    color: Colors.email,
   },
   [Stack.CSS]: {
     value: 'CSS',
@@ -115,8 +130,9 @@ export const StackInfo: Record<Stack, StackInfoMap> = {
     value: 'Redux',
     color: Colors.redux,
   },
-  [Stack.nextjs]: {
-    value: 'Next JS',
-    color: Colors.nextjs,
+
+  [Stack.docker]: {
+    value: 'Docker',
+    color: Colors.typescript,
   },
 };

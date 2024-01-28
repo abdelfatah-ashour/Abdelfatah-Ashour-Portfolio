@@ -16,7 +16,7 @@ const siteMetadata = {
   twitter: 'https://twitter.com/abdoashour07',
   facebook: 'https://www.facebook.com/abdelfatahashour7',
   youtube: 'https://www.youtube.com/channel/UCjlfzLwFLvTf_BQiZACLXLg',
-  linkedin: 'https://www.linkedin.com/in/abdelfatah-ashour/',
+  linkedin: 'https://www.linkedin.com/in/abdelfatah-ashour',
   locale: 'en-US',
   analytics: {
     // If you want to use an analytics provider you have to add it to the

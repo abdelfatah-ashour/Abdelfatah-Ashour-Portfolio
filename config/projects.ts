@@ -33,10 +33,48 @@ export interface Project {
 
 export const projects: Project[] = [
   {
+    title: 'Tiras',
+    slug: 'tiras',
+    banner: '/static/projects/tiras/banner.png',
+    website: 'https://thiqeel.com/',
+    description:
+      'Tiras is the leading Real Estate marketplace in Saudi Arabia where you can browse thousands of freshly updated properties for sale or rent, and you can advertise your properties too',
+    shortDescription:
+      'Ready to deploy, distributed cryptocurrency trading bot.',
+    repository: '',
+    stack: [
+      Stack.node,
+      Stack.nextjs,
+      Stack.react,
+      Stack.redux,
+      Stack.javascript,
+      Stack.pusherjs,
+      Stack.CSS,
+      Stack.tailwindcss,
+      Stack.redux,
+    ],
+    dimensions: [360, 640],
+    screenshots: [
+      '/static/projects/tiras/screens/1.png',
+      '/static/projects/tiras/screens/2.png',
+      '/static/projects/tiras/screens/3.png',
+      '/static/projects/tiras/screens/4.png',
+      '/static/projects/tiras/screens/5.png',
+      '/static/projects/tiras/screens/6.png',
+      '/static/projects/tiras/screens/7.png',
+      '/static/projects/tiras/screens/8.png',
+      '/static/projects/tiras/screens/9.png',
+    ],
+    deployment: {
+      web: 'https://krafttopia.com/',
+    },
+    subProjects: [],
+  },
+  {
     title: 'Thiqeel',
     slug: 'thiqeel',
     banner: '/static/projects/thiqeel/banner.png',
-    website: 'https://krafttopia.com/',
+    website: 'https://thiqeel.com/',
     description:
       'is a digital platform that allows buyers and suppliers to place bids, enabling rapid and effective negotiations based on real-time price and volume.Featuring real-time collaboration and advanced buying analytics, auction — or eAuction — software  enables live viewing of bids, with in-the-moment context. Procurement organizations can set custom bidding parameters and make them available to suppliers too, so that everyone may bid on contracts fairly. eAuctions ensure that suppliers’ names remain masked and private.A unified platform such as GEP SMART™ facilitates eAuctions as routine sourcing events where users can simply create an auction, just like they would create an RFP, and enable real-time bidding.',
     shortDescription:
@@ -77,7 +115,7 @@ export const projects: Project[] = [
     title: 'Portflash',
     slug: 'portflash',
     banner: '/static/projects/port-flash/banner.png',
-    website: 'https://krafttopia.com/',
+    website: 'https://port-flash.com/',
     description:
       'provider of a hosting service which, at the request of a recipient of the service, stores and disseminates to the public information, unless that activity is a minor and purely ancillary feature of another service and, for objective and technical reasons cannot be used without that other service, and the integration of the feature into the other service is not a means to circumvent the applicability of this Regulation.',
     shortDescription:
