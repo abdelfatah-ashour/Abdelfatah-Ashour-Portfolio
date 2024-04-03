@@ -36,7 +36,7 @@ export const projects: Project[] = [
     title: 'Tiras',
     slug: 'tiras',
     banner: '/static/projects/tiras/banner.png',
-    website: 'https://thiqeel.com/',
+    website: 'https://beta.tiras.app/en',
     description:
       'Tiras is the leading Real Estate marketplace in Saudi Arabia where you can browse thousands of freshly updated properties for sale or rent, and you can advertise your properties too',
     shortDescription:
@@ -107,7 +107,7 @@ export const projects: Project[] = [
       '/static/projects/thiqeel/screens/11.png',
     ],
     deployment: {
-      web: 'https://krafttopia.com/',
+      web: 'https://thiqeel.com/',
     },
     subProjects: [],
   },
@@ -140,7 +140,7 @@ export const projects: Project[] = [
       '/static/projects/port-flash/screens/7.png',
     ],
     deployment: {
-      web: 'https://krafttopia.com/',
+      web: 'https://port-flash.com/',
     },
     subProjects: [],
   },
