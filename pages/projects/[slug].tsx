@@ -58,7 +58,7 @@ export default function Project({
 
       return (
         <div
-          className='mr-2 flex-shrink-0 overflow-hidden rounded bg-placeholder-light dark:bg-placeholder-dark'
+          className='mr-2 shrink-0 overflow-hidden rounded-sm bg-placeholder-light dark:bg-placeholder-dark'
           style={style}
         >
           <Image
@@ -66,7 +66,7 @@ export default function Project({
             src={screenshot}
             height={height}
             width={width}
-            objectFit='cover'
+            className='object-cover'
             alt=''
           />
         </div>

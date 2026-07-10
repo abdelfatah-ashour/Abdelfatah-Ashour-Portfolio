@@ -1,20 +1,23 @@
-import { useEffect, useState } from 'react';
+import { useSyncExternalStore } from 'react';
 import { useTheme } from 'next-themes';
 import { IoMdMoon as MoonIcon } from 'react-icons/io';
 import { IoSunnyOutline as SunIcon } from 'react-icons/io5';
 
-const ThemeSwitch = () => {
-  const [mounted, setMounted] = useState(false);
-  const { theme, setTheme, resolvedTheme } = useTheme();
+const emptySubscribe = () => () => {};
 
-  // When mounted on client, now we can show the UI
-  useEffect(() => setMounted(true), []);
+const ThemeSwitch = () => {
+  const mounted = useSyncExternalStore(
+    emptySubscribe,
+    () => true,
+    () => false,
+  );
+  const { theme, setTheme, resolvedTheme } = useTheme();
 
   return (
     <button
       aria-label='Toggle Dark Mode'
       type='button'
-      className='ml-1 mr-1 h-8 w-8 rounded p-1 sm:ml-4'
+      className='ml-1 mr-1 h-8 w-8 rounded-sm p-1 sm:ml-4'
       onClick={() =>
         setTheme(
           theme === 'dark' || resolvedTheme === 'dark' ? 'light' : 'dark',

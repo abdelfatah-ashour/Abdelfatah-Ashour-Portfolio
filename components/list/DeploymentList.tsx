@@ -16,7 +16,7 @@ function DeploymentList(props: DeploymentListProps): React.ReactElement {
 
     return (
       <a
-        className='mr-2 flex items-center rounded-sm px-2 py-1 text-xs font-medium text-white'
+        className='mr-2 flex items-center rounded-xs px-2 py-1 text-xs font-medium text-white'
         href={link}
         style={{ background }}
         target='_blank'

@@ -51,7 +51,7 @@ const TOCInline = ({
           key={heading.value}
           className={`${heading.depth >= indentDepth && 'ml-6'}`}
         >
-          <a className='!no-underline' href={heading.url}>
+          <a className='no-underline!' href={heading.url}>
             {heading.value}
           </a>
         </li>
@@ -68,8 +68,8 @@ const TOCInline = ({
   return (
     <>
       {asDisclosure && renderTOC ? (
-        <Collapse className='!border-0 !pt-0' title={title}>
-          <div className='ml-4 !-mt-4'>{tocList}</div>
+        <Collapse className='border-0! pt-0!' title={title}>
+          <div className='ml-4 -mt-4!'>{tocList}</div>
         </Collapse>
       ) : (
         tocList

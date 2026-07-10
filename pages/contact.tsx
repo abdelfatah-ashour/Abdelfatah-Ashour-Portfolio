@@ -3,11 +3,13 @@ import { PageSEO } from '@/components/SEO';
 import siteMetadata from '@/data/siteMetadata';
 import { useRandomColorPair } from '@/lib/hooks/useRandomColorPair';
 import { contact } from 'config/contact';
-import { openPopupWidget } from 'react-calendly';
+import { useState, type ReactElement } from 'react';
+import { PopupModal } from 'react-calendly';
 import { RoughNotation } from 'react-rough-notation';
 
-function Contact(): React.ReactElement {
+function Contact(): ReactElement {
   const [randomColor] = useRandomColorPair();
+  const [isOpen, setIsOpen] = useState(false);
 
   function onScheduleMeeting(): void {
     if (!contact.calendly) {
@@ -15,11 +17,7 @@ function Contact(): React.ReactElement {
       return;
     }
 
-    const config = {
-      url: contact.calendly,
-    };
-
-    openPopupWidget(config);
+    setIsOpen(true);
   }
 
   return (
@@ -35,7 +33,7 @@ function Contact(): React.ReactElement {
             Do you have a project in mind? Want to hire me? or simply wanna
             chat? Feel free to
             <span
-              className='ml-2 cursor-pointer !font-normal !text-black !no-underline dark:!text-white'
+              className='ml-2 cursor-pointer font-normal! text-black! no-underline! dark:text-white!'
               onClick={onScheduleMeeting}
               role='button'
               tabIndex={0}
@@ -54,6 +52,14 @@ function Contact(): React.ReactElement {
           </p>
         </div>
       </div>
+      {contact.calendly && typeof window !== 'undefined' && (
+        <PopupModal
+          url={contact.calendly}
+          onModalClose={() => setIsOpen(false)}
+          open={isOpen}
+          rootElement={document.body}
+        />
+      )}
     </>
   );
 }

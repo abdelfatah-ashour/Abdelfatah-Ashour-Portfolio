@@ -1,4 +1,3 @@
-/* eslint-disable jsx-a11y/anchor-has-content */
 import Link from 'next/link';
 import { AnchorHTMLAttributes, DetailedHTMLProps } from 'react';
 
@@ -13,11 +12,7 @@ const CustomLink = ({
   const isAnchorLink = href && href.startsWith('#');
 
   if (isInternalLink) {
-    return (
-      <Link href={href}>
-        <a {...rest} />
-      </Link>
-    );
+    return <Link href={href} {...rest} />;
   }
 
   if (isAnchorLink) {

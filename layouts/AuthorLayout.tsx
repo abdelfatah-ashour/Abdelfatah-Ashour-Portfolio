@@ -27,8 +27,8 @@ export default function AuthorLayout({ children, frontMatter }: Props) {
             <Image
               src={avatar}
               alt='avatar'
-              width='192px'
-              height='192px'
+              width={192}
+              height={192}
               className='h-48 w-48 rounded-full'
             />
             <h3 className='pt-4 pb-2 text-2xl font-bold leading-8 tracking-tight'>
@@ -42,9 +42,9 @@ export default function AuthorLayout({ children, frontMatter }: Props) {
 
           <div className='prose max-w-none pt-8 pb-8 dark:prose-dark xl:col-span-2'>
             {children}
-            <p className='mt-8'>
+            <div className='mt-8'>
               <a
-                className='!font-normal !text-black !no-underline dark:!text-white'
+                className='font-normal! text-black! no-underline! dark:text-white!'
                 href={resume}
                 target='_blank'
                 rel='noreferrer'
@@ -64,7 +64,7 @@ export default function AuthorLayout({ children, frontMatter }: Props) {
                 Skills
               </h2>
               <StackList stack={WorkStack} />
-            </p>
+            </div>
           </div>
         </div>
       </div>

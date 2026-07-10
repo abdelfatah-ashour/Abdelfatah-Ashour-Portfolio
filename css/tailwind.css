@@ -1,25 +1,203 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss';
+
+@plugin '@tailwindcss/forms';
+@plugin '@tailwindcss/typography';
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-sans:
+    'Open Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji',
+    'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+
+  --spacing-9\/16: 56.25%;
+
+  --leading-11: 2.75rem;
+  --leading-12: 3rem;
+  --leading-13: 3.25rem;
+  --leading-14: 3.5rem;
+
+  --color-primary-50: oklch(98.4% 0.019 200.873);
+  --color-primary-100: oklch(95.6% 0.045 203.388);
+  --color-primary-200: oklch(91.7% 0.08 205.041);
+  --color-primary-300: oklch(86.5% 0.127 207.078);
+  --color-primary-400: oklch(78.9% 0.154 211.53);
+  --color-primary-500: oklch(71.5% 0.143 215.221);
+  --color-primary-600: oklch(60.9% 0.126 221.723);
+  --color-primary-700: oklch(52% 0.105 223.128);
+  --color-primary-800: oklch(45% 0.085 224.283);
+  --color-primary-900: oklch(39.8% 0.07 227.392);
+  --color-primary-950: oklch(30.2% 0.056 229.695);
+
+  --color-gray-50: oklch(98.5% 0 0);
+  --color-gray-100: oklch(97% 0 0);
+  --color-gray-200: oklch(92.2% 0 0);
+  --color-gray-300: oklch(87% 0 0);
+  --color-gray-400: oklch(70.8% 0 0);
+  --color-gray-500: oklch(55.6% 0 0);
+  --color-gray-600: oklch(43.9% 0 0);
+  --color-gray-700: oklch(37.1% 0 0);
+  --color-gray-800: oklch(26.9% 0 0);
+  --color-gray-900: oklch(20.5% 0 0);
+  --color-gray-950: oklch(14.5% 0 0);
+
+  --color-placeholder-light: #f0f0f0;
+  --color-placeholder-dark: #252525;
+}
+
+/*
+  Compatibility: default border color was gray-200 in v3.
+*/
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentcolor);
+  }
+}
+
+/* Custom typography theme previously named `prose-dark` */
+@utility prose-dark {
+  --tw-prose-body: var(--color-gray-300);
+  --tw-prose-headings: var(--color-gray-100);
+  --tw-prose-lead: var(--color-gray-300);
+  --tw-prose-links: var(--color-primary-500);
+  --tw-prose-bold: var(--color-gray-100);
+  --tw-prose-counters: var(--color-gray-400);
+  --tw-prose-bullets: var(--color-gray-400);
+  --tw-prose-hr: var(--color-gray-700);
+  --tw-prose-quotes: var(--color-gray-100);
+  --tw-prose-quote-borders: var(--color-gray-700);
+  --tw-prose-captions: var(--color-gray-400);
+  --tw-prose-code: var(--color-primary-400);
+  --tw-prose-pre-code: var(--color-gray-200);
+  --tw-prose-pre-bg: var(--color-gray-800);
+  --tw-prose-th-borders: var(--color-gray-700);
+  --tw-prose-td-borders: var(--color-gray-700);
+}
+
+.prose {
+  --tw-prose-body: var(--color-gray-700);
+  --tw-prose-headings: var(--color-gray-900);
+  --tw-prose-links: var(--color-primary-500);
+  --tw-prose-bold: var(--color-gray-600);
+  --tw-prose-counters: var(--color-gray-500);
+  --tw-prose-bullets: var(--color-gray-500);
+  --tw-prose-hr: var(--color-gray-200);
+  --tw-prose-quotes: var(--color-gray-900);
+  --tw-prose-quote-borders: var(--color-gray-200);
+  --tw-prose-code: var(--color-pink-500);
+  --tw-prose-pre-bg: var(--color-gray-800);
+}
+
+.prose a:hover {
+  color: var(--color-primary-600) !important;
+}
+
+.prose-dark a:hover {
+  color: var(--color-primary-400) !important;
+}
+
+.prose :where(code):not(:where([class~='not-prose'], [class~='not-prose'] *)) {
+  background-color: var(--color-gray-100);
+  padding: 2px 4px;
+  border-radius: 0.25rem;
+}
+
+.prose
+  :where(code):not(
+    :where([class~='not-prose'], [class~='not-prose'] *)
+  )::before,
+.prose
+  :where(code):not(
+    :where([class~='not-prose'], [class~='not-prose'] *)
+  )::after {
+  content: none;
+}
+
+.prose-dark
+  :where(code):not(:where([class~='not-prose'], [class~='not-prose'] *)) {
+  background-color: var(--color-gray-800);
+}
+
+.prose
+  :where(details):not(:where([class~='not-prose'], [class~='not-prose'] *)) {
+  background-color: var(--color-gray-100);
+  padding: 2px 4px;
+  border-radius: 0.25rem;
+}
+
+.prose-dark
+  :where(details):not(:where([class~='not-prose'], [class~='not-prose'] *)) {
+  background-color: var(--color-gray-800);
+}
 
 .task-list-item::before {
-  @apply hidden;
+  display: none;
 }
 
 .task-list-item {
-  @apply list-none;
+  list-style: none;
 }
 
 .footnotes {
-  @apply mt-12 border-t border-gray-100 pt-8 dark:border-gray-800;
+  margin-top: calc(var(--spacing) * 12);
+  border-top-width: 1px;
+  border-color: var(--color-gray-100);
+  padding-top: calc(var(--spacing) * 8);
+}
+
+.dark .footnotes {
+  border-color: var(--color-gray-800);
 }
 
 .csl-entry {
-  @apply my-5;
+  margin-block: calc(var(--spacing) * 5);
 }
 
 /* https://stackoverflow.com/questions/61083813/how-to-avoid-internal-autofill-selected-style-to-be-applied */
 input:-webkit-autofill,
 input:-webkit-autofill:focus {
-  transition: background-color 600000s 0s, color 600000s 0s;
+  transition:
+    background-color 600000s 0s,
+    color 600000s 0s;
+}
+
+.fade-in {
+  animation: fade-in ease 500ms;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.banner {
+  min-height: 70vh;
+}
+
+@media (width >= 64rem) {
+  .banner {
+    min-height: 95vh;
+  }
+}
+
+.social-icons:last-child .icon {
+  margin-right: 0;
+}
+
+.content {
+  padding-bottom: 0 !important;
+}
+
+.dark .collapse .view .title {
+  color: var(--color-white);
 }

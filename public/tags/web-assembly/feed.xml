@@ -20,15 +20,5 @@
     <category>Web Assembly</category>
   </item>
 
-  <item>
-    <guid>https://abdelfatah-ashour.vercel.app//blog/what-is-strategy-for-legacy-code-and-how-to-starting</guid>
-    <title>What is about Web Assembly?</title>
-    <link>https://abdelfatah-ashour.vercel.app//blog/what-is-strategy-for-legacy-code-and-how-to-starting</link>
-    <description>Learn how to Write unit and integration tests for your react component</description>
-    <pubDate>Mon, 27 Mar 2023 00:00:00 GMT</pubDate>
-    <author>abdelfatahashour4@gmail.com (Abdelfatah Ashour)</author>
-    <category>Web Assembly</category>
-  </item>
-
     </channel>
   </rss>

@@ -11,7 +11,6 @@ import {
 import {
   SiBuymeacoffee as BuymeacoffeeIcon,
   SiGmail as MailIcon,
-  // SiYoutube as YoutubeIcon,
 } from 'react-icons/si';
 import { Maybe, Tuple } from 'types';
 
@@ -24,7 +23,7 @@ function SocialIcons(props: SocialIconsProps): React.ReactElement {
 
   return (
     <div className={clsx('mt-2 flex', className)}>
-      {React.Children.toArray(Object.entries(contact.links).map(resolveIcon))}
+      {Object.entries(contact.links).map(entry => resolveIcon(entry))}
     </div>
   );
 }
@@ -52,10 +51,6 @@ function resolveIcon(entry: Tuple<string>): React.ReactNode {
       icon = <GithubIcon {...props} />;
       break;
 
-    // case ContactType.youtube:
-    //   icon = <YoutubeIcon {...props} />;
-    //   break;
-
     case ContactType.email:
       icon = <MailIcon {...props} />;
       break;
@@ -69,6 +64,7 @@ function resolveIcon(entry: Tuple<string>): React.ReactNode {
 
   return (
     <a
+      key={type}
       className='social-icons'
       href={url}
       aria-label={type}

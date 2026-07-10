@@ -1,4 +1,3 @@
-import '@/css/global.css';
 import '@/css/prism.css';
 import '@/css/tailwind.css';
 import 'katex/dist/katex.css';
@@ -14,6 +13,7 @@ import '@fontsource/open-sans/800.css';
 import { ThemeProvider, useTheme } from 'next-themes';
 import type { AppProps } from 'next/app';
 import Head from 'next/head';
+import type { ReactElement, ReactNode } from 'react';
 
 import Analytics from '@/components/analytics';
 import { ClientReload } from '@/components/ClientReload';
@@ -42,10 +42,12 @@ export default function App({ Component, pageProps }: AppProps) {
   );
 }
 
-function GeistProviderWithTheme(props): React.ReactElement {
+function GeistProviderWithTheme({
+  children,
+}: {
+  children: ReactNode;
+}): ReactElement {
   const { resolvedTheme } = useTheme();
 
-  return (
-    <GeistProvider themeType={resolvedTheme}>{props.children}</GeistProvider>
-  );
+  return <GeistProvider themeType={resolvedTheme}>{children}</GeistProvider>;
 }
