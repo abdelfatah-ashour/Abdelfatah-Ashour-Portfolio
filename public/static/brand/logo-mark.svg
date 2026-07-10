@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024" fill="none">
+  
+  <defs>
+    <linearGradient id="markInk" x1="15%" y1="10%" x2="85%" y2="90%">
+      <stop offset="0%" stop-color="#2c323a"/>
+      <stop offset="50%" stop-color="#16181c"/>
+      <stop offset="100%" stop-color="#2c323a"/>
+    </linearGradient>
+    <linearGradient id="goldLine" x1="0%" y1="50%" x2="100%" y2="50%">
+      <stop offset="0%" stop-color="#b5aea0"/>
+      <stop offset="25%" stop-color="#8b8578"/>
+      <stop offset="50%" stop-color="#b5aea0"/>
+      <stop offset="75%" stop-color="#8b8578"/>
+      <stop offset="100%" stop-color="#b5aea0"/>
+    </linearGradient>
+  </defs>
+
+  <path d="M 280 740 C 280 460 380 260 512 260 C 644 260 744 460 744 740" fill="none" stroke="url(#markInk)"
+    stroke-width="69.63" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 340 700 C 340 500 410 330 512 330 C 614 330 684 500 684 700" fill="none" stroke="url(#goldLine)"
+    stroke-width="22.53" stroke-linecap="round"/>
+
+  <rect x="483.33" y="732.16"
+    width="57.34" height="57.34"
+    rx="12.29" fill="#16181c"/>
+</svg>

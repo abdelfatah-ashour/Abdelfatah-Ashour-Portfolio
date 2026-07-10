@@ -1,0 +1,18 @@
+[
+  {
+    "category": "Languages",
+    "items": ["HTML", "CSS", "JavaScript", "TypeScript", "Java"]
+  },
+  {
+    "category": "Frameworks",
+    "items": ["React", "Next.js", "React Native", "Redux", "Angular", "Ionic"]
+  },
+  {
+    "category": "Styling",
+    "items": ["Tailwind CSS", "Sass", "Styled Components", "Material UI"]
+  },
+  {
+    "category": "Tooling & Data",
+    "items": ["Git", "Node.js", "GraphQL", "Firebase", "MongoDB", "Docker"]
+  }
+]

@@ -1,0 +1,14 @@
+{
+  "name": "Abdelfatah Ashour",
+  "shortname": "Abdelfatah",
+  "avatar": "/static/abdelfattah-ashour.webp",
+  "occupation": "Frontend Engineer",
+  "resume": "/static/Abdelfatah-Ashour-Resume.pdf",
+  "email": "abdelfatahashour4@gmail.com",
+  "headline": "Crafting calm, thoughtful interfaces for the web.",
+  "bio": [
+    "A frontend engineer who grows with people, teams, and the craft of the web.",
+    "I care about clarity in code and quiet confidence in the products people touch every day — interfaces that feel considered, not crowded.",
+    "Most of my work lives in React and Next.js, where I turn product intent into screens that stay calm, fast, and maintainable as they grow."
+  ]
+}

@@ -1,0 +1,37 @@
+[
+  {
+    "company": "Leadliaison",
+    "role": "Front-End Developer",
+    "period": "Jun 2024 — Present",
+    "summary": "Building and refining product interfaces for a marketing automation and lead management platform used by sales and marketing teams.",
+    "highlights": [
+      "Shipped frontend features across lead capture, nurturing, and tracking workflows.",
+      "Improved UI consistency and usability across core product surfaces.",
+      "Collaborating with product and engineering to keep experiences clear, fast, and reliable."
+    ],
+    "stack": ["Angular", "Ionic", "Tailwind CSS", "React", "Next.js"]
+  },
+  {
+    "company": "Simaat",
+    "role": "Front-End Developer",
+    "period": "Nov 2022 — Jun 2024",
+    "summary": "Built and refined product interfaces for real estate and procurement platforms across the Saudi market.",
+    "highlights": [
+      "Refactored and enhanced core modules for Thiqeel — a live e-auction and procurement platform.",
+      "Shipped Tiras with Next.js and TypeScript — a real estate marketplace for browsing and listing properties.",
+      "Collaborated with design and product to keep experiences calm, fast, and reliable."
+    ],
+    "stack": ["Next.js", "TypeScript", "React", "Redux", "Tailwind CSS"]
+  },
+  {
+    "company": "Flowtechtics",
+    "role": "Frontend Developer",
+    "period": "Oct 2021 — Nov 2022",
+    "summary": "Delivered frontend features for client products with a focus on clean UI architecture and maintainable React code.",
+    "highlights": [
+      "Built responsive interfaces with React, TypeScript, and modern CSS tooling.",
+      "Partnered with teams to turn product requirements into polished, usable screens."
+    ],
+    "stack": ["React", "TypeScript", "Sass", "Firebase"]
+  }
+]
