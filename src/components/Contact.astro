@@ -1,0 +1,178 @@
+---
+import Button from '@/components/Button.astro';
+import Section from '@/components/Section.astro';
+import SectionHeading from '@/components/SectionHeading.astro';
+import type { Contact } from '@/lib/data';
+
+interface Props {
+  contact: Contact;
+}
+
+const { contact } = Astro.props;
+
+function pathTail(url: string) {
+  try {
+    const { pathname } = new URL(url);
+    return pathname.replace(/\/+$/, '').split('/').filter(Boolean).at(-1) ?? url;
+  } catch {
+    return url;
+  }
+}
+
+const channels: {
+  key: keyof Contact['links'];
+  label: string;
+  value: string;
+  external?: boolean;
+}[] = [
+  {
+    key: 'email',
+    label: 'Email',
+    value: contact.links.email.replace(/^mailto:/i, ''),
+  },
+  {
+    key: 'linkedin',
+    label: 'LinkedIn',
+    value: pathTail(contact.links.linkedin),
+    external: true,
+  },
+  {
+    key: 'github',
+    label: 'GitHub',
+    value: pathTail(contact.links.github),
+    external: true,
+  },
+  {
+    key: 'twitter',
+    label: 'Twitter',
+    value: contact.twitterHandle,
+    external: true,
+  },
+];
+---
+
+<Section
+  id="contact"
+  labelledBy="contact-heading"
+  class="brand-section relative overflow-hidden"
+>
+  <div
+    aria-hidden
+    class="brand-wash pointer-events-none absolute top-0 right-0 translate-x-1/4 -translate-y-1/5"
+  >
+    <div
+      class="parallax-slow h-64 w-64 rounded-full bg-gradient-to-bl from-gold-soft/22 via-transparent to-transparent"
+    >
+    </div>
+  </div>
+  <div
+    aria-hidden
+    class="brand-wash pointer-events-none absolute bottom-4 left-0 -translate-x-1/3"
+  >
+    <div
+      class="parallax-slow h-48 w-48 rounded-full bg-gradient-to-tr from-sky-mist/22 to-transparent"
+    >
+    </div>
+  </div>
+
+  <div class="contact-panel relative overflow-hidden">
+    <div
+      aria-hidden
+      class="contact-panel-sheen pointer-events-none absolute inset-0"
+    >
+    </div>
+    <div
+      aria-hidden
+      class="contact-panel-orb pointer-events-none absolute -top-24 -right-16 h-56 w-56 rounded-full"
+    >
+    </div>
+    <div
+      aria-hidden
+      class="contact-panel-orb-alt pointer-events-none absolute -bottom-20 -left-12 h-44 w-44 rounded-full"
+    >
+    </div>
+
+    <div class="contact-layout relative">
+      <div class="contact-invite">
+        <SectionHeading id="contact-heading" eyebrow="Connect" title="Contact" />
+
+        <p class="contact-lead font-display reveal reveal-delay-1">
+          Open to thoughtful collaborations and calm software.
+        </p>
+
+        <p class="contact-support reveal reveal-delay-1">
+          Book a conversation on Calendly — no forms, just a clear next step.
+        </p>
+
+        <div class="contact-cta reveal reveal-delay-2">
+          <Button href={contact.calendly} external class="brand-cta">
+            <svg
+              aria-hidden="true"
+              class="size-4"
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M8 2v4"></path>
+              <path d="M16 2v4"></path>
+              <rect width="18" height="18" x="3" y="4" rx="2"></rect>
+              <path d="M3 10h18"></path>
+            </svg>
+            Get in touch
+          </Button>
+        </div>
+      </div>
+
+      <div class="contact-channels reveal-left reveal-delay-1">
+        <div class="brand-eyebrow mb-6 flex items-center gap-4">
+          <span aria-hidden class="brand-eyebrow-rule"></span>
+          <p class="text-[0.7rem] font-medium tracking-[0.32em] uppercase">
+            Channels
+          </p>
+        </div>
+
+        <ul class="contact-channel-list">
+          {
+            channels.map(({ key, label, value, external }) => (
+              <li>
+                <a
+                  href={contact.links[key]}
+                  class="contact-channel"
+                  target={external ? '_blank' : undefined}
+                  rel={external ? 'noopener noreferrer' : undefined}
+                >
+                  <span class="contact-channel-label">{label}</span>
+                  <span class="contact-channel-value">
+                    {value}
+                    <svg
+                      aria-hidden="true"
+                      class="contact-channel-arrow size-3.5"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path d="M7 7h10v10" />
+                      <path d="M7 17 17 7" />
+                    </svg>
+                  </span>
+                </a>
+              </li>
+            ))
+          }
+        </ul>
+      </div>
+    </div>
+  </div>
+</Section>

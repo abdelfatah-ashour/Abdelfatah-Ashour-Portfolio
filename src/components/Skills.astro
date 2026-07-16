@@ -1,0 +1,77 @@
+---
+import Section from '@/components/Section.astro';
+import SectionHeading from '@/components/SectionHeading.astro';
+import type { SkillGroup } from '@/lib/data';
+
+interface Props {
+  skills: SkillGroup[];
+}
+
+const { skills } = Astro.props;
+---
+
+<Section
+  id="skills"
+  labelledBy="skills-heading"
+  class="brand-section relative overflow-hidden"
+>
+  <div
+    aria-hidden
+    class="brand-wash pointer-events-none absolute top-8 right-0 translate-x-1/4"
+  >
+    <div
+      class="parallax-slow h-56 w-56 rounded-full bg-gradient-to-bl from-gold-soft/18 via-transparent to-transparent"
+    >
+    </div>
+  </div>
+  <div
+    aria-hidden
+    class="brand-wash pointer-events-none absolute bottom-0 left-0 -translate-x-1/4 translate-y-1/4"
+  >
+    <div
+      class="parallax-slow h-44 w-44 rounded-full bg-gradient-to-tr from-sky-mist/20 to-transparent"
+    >
+    </div>
+  </div>
+
+  <SectionHeading
+    id="skills-heading"
+    eyebrow="Expertise"
+    title="Skills"
+    description="Four pillars of my frontend craft — from language fundamentals to the tools that keep products shipping."
+  />
+
+  <ul class="skills-board mt-14 grid gap-5 sm:mt-16 sm:grid-cols-2 sm:gap-6">
+    {
+      skills.map((group, index) => (
+        <li
+          class:list={[
+            `skills-card reveal-scale skills-card-${index + 1}`,
+            index % 2 === 1 ? 'reveal-delay-1' : '',
+          ]}
+        >
+          <article class="skills-card-body">
+            <header class="skills-card-head">
+              <span aria-hidden class="skills-card-num">
+                {String(index + 1).padStart(2, '0')}
+              </span>
+              <h3 class="skills-card-title font-display">{group.category}</h3>
+            </header>
+
+            <div aria-hidden class="skills-card-rule" />
+
+            <ul class="skills-card-list" aria-label={group.category}>
+              {group.items.map((skill) => (
+                <li class="skills-chip">{skill}</li>
+              ))}
+            </ul>
+
+            <span aria-hidden class="skills-card-mark">
+              {group.category.charAt(0)}
+            </span>
+          </article>
+        </li>
+      ))
+    }
+  </ul>
+</Section>

@@ -1,0 +1,21 @@
+---
+import Container from '@/components/Container.astro';
+
+interface Props {
+  id: string;
+  class?: string;
+  labelledBy?: string;
+}
+
+const { id, class: className = '', labelledBy } = Astro.props;
+---
+
+<section
+  id={id}
+  aria-labelledby={labelledBy}
+  class={`section-enter scroll-mt-24 py-20 sm:py-28 ${className}`}
+>
+  <Container>
+    <slot />
+  </Container>
+</section>

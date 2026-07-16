@@ -1,26 +1,11 @@
+import eslintPluginAstro from 'eslint-plugin-astro';
 import { defineConfig, globalIgnores } from 'eslint/config';
-import nextVitals from 'eslint-config-next/core-web-vitals';
-import nextTs from 'eslint-config-next/typescript';
 import prettier from 'eslint-config-prettier/flat';
+import tseslint from 'typescript-eslint';
 
-const eslintConfig = defineConfig([
-  ...nextVitals,
-  ...nextTs,
+export default defineConfig([
+  ...tseslint.configs.recommended,
+  ...eslintPluginAstro.configs.recommended,
   prettier,
-  {
-    rules: {
-      'react/react-in-jsx-scope': 'off',
-      'react/prop-types': 'off',
-    },
-  },
-  globalIgnores([
-    '.next/**',
-    'out/**',
-    'build/**',
-    'node_modules/**',
-    'next-env.d.ts',
-    'public/**',
-  ]),
+  globalIgnores(['dist/**', '.astro/**', 'node_modules/**', 'public/**']),
 ]);
-
-export default eslintConfig;

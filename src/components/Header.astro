@@ -1,0 +1,93 @@
+---
+import Container from '@/components/Container.astro';
+
+interface Props {
+  name: string;
+}
+
+const { name } = Astro.props;
+const [firstName, ...rest] = name.split(' ');
+const lastName = rest.join(' ');
+
+const navLinks = [
+  { href: '#about', label: 'About' },
+  { href: '#experience', label: 'Experience' },
+  { href: '#skills', label: 'Skills' },
+  { href: '#contact', label: 'Contact' },
+];
+---
+
+<header class="brand-header sticky top-0 z-50">
+  <Container class="flex h-16 items-center justify-between">
+    <a href="#top" class="brand-logo" aria-label={name}>
+      <span aria-hidden class="brand-logo-mark">
+        <img
+          src="/static/brand/logo-mark.svg"
+          alt=""
+          width="32"
+          height="32"
+          class="brand-logo-mark-img"
+        />
+      </span>
+      <span class="brand-logo-word">
+        <span class="brand-logo-first">{firstName}</span>
+        {lastName ? <span class="brand-logo-last">{lastName}</span> : null}
+      </span>
+    </a>
+
+    <nav aria-label="Primary" class="hidden sm:block">
+      <ul class="flex items-center gap-8">
+        {
+          navLinks.map((link) => (
+            <li>
+              <a
+                href={link.href}
+                class="text-sm tracking-wide text-ink-muted transition-colors hover:text-sage link-underline"
+              >
+                {link.label}
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </nav>
+
+    <details class="group relative sm:hidden">
+      <summary
+        class="flex size-10 list-none items-center justify-center rounded-sm text-ink marker:content-none [&::-webkit-details-marker]:hidden"
+        aria-label="Menu"
+      >
+        <span class="flex flex-col gap-1.5" aria-hidden>
+          <span
+            class="block h-px w-5 bg-current transition group-open:translate-y-[3.5px] group-open:rotate-45"
+          ></span>
+          <span
+            class="block h-px w-5 bg-current transition group-open:opacity-0"
+          ></span>
+          <span
+            class="block h-px w-5 bg-current transition group-open:-translate-y-[3.5px] group-open:-rotate-45"
+          ></span>
+        </span>
+      </summary>
+      <nav
+        aria-label="Mobile"
+        class="absolute top-full right-0 mt-2 w-48 rounded-sm border border-ink/10 bg-mist/95 p-2 shadow-sm backdrop-blur-md"
+      >
+        <ul class="flex flex-col">
+          {
+            navLinks.map((link) => (
+              <li>
+                <a
+                  href={link.href}
+                  class="block rounded-sm px-3 py-2.5 text-sm text-ink hover:bg-mist-deep"
+                >
+                  {link.label}
+                </a>
+              </li>
+            ))
+          }
+        </ul>
+      </nav>
+    </details>
+  </Container>
+</header>

@@ -1,0 +1,175 @@
+---
+import Button from '@/components/Button.astro';
+import Container from '@/components/Container.astro';
+import type { Contact, Profile } from '@/lib/data';
+
+interface Props {
+  profile: Profile;
+  calendly: Contact['calendly'];
+}
+
+const { profile, calendly } = Astro.props;
+const [firstName, ...rest] = profile.name.split(' ');
+const lastName = rest.join(' ');
+---
+
+<section
+  id="top"
+  aria-labelledby="hero-heading"
+  class="hero relative flex min-h-[min(100svh,56rem)] flex-col overflow-hidden"
+>
+  <div aria-hidden class="hero-stage pointer-events-none absolute inset-0">
+    <div class="hero-portrait">
+      <img
+        src={profile.avatar}
+        alt=""
+        width="960"
+        height="1200"
+        decoding="async"
+        fetchpriority="high"
+        class="hero-portrait-img"
+      />
+    </div>
+    <div class="hero-veil"></div>
+    <div class="hero-glow hero-glow-a"></div>
+    <div class="hero-glow hero-glow-b"></div>
+    <div class="hero-sheen"></div>
+    <div class="hero-noise"></div>
+  </div>
+
+  <Container class="relative flex flex-1 flex-col justify-center py-24 sm:py-28 lg:py-32">
+    <div class="hero-copy hero-exit relative max-w-2xl lg:max-w-3xl">
+      <p
+        class="hero-line hero-line-1 hero-eyebrow mb-8 flex items-center gap-4 text-[0.7rem] font-medium tracking-[0.38em] uppercase sm:mb-10"
+      >
+        <span aria-hidden class="hero-eyebrow-rule"></span>
+        <span class="hero-eyebrow-text">{profile.occupation}</span>
+      </p>
+
+      <h1
+        id="hero-heading"
+        class="hero-title font-display leading-[0.92] tracking-[-0.04em] text-ink"
+      >
+        <span class="hero-name-mask">
+          <span
+            class="hero-line hero-line-2 hero-firstname block text-[clamp(2.6rem,8.2vw,5.35rem)]"
+          >
+            {firstName}
+          </span>
+        </span>
+        {
+          lastName ? (
+            <span class="hero-name-mask mt-1 block sm:mt-2">
+              <span class="hero-line hero-line-3 hero-lastname block text-[clamp(2.6rem,8.2vw,5.35rem)]">
+                {lastName}
+              </span>
+            </span>
+          ) : null
+        }
+      </h1>
+
+      <p
+        class="hero-line hero-line-4 mt-8 max-w-md text-lg leading-relaxed text-ink-muted sm:mt-10 sm:text-xl"
+      >
+        {profile.headline}
+      </p>
+
+      <div
+        aria-hidden
+        class="hero-line hero-line-5 hero-divider mt-9 sm:mt-11"
+      >
+      </div>
+
+      <div
+        class="hero-line hero-line-6 hero-actions mt-9 flex flex-wrap items-center gap-3 sm:mt-10"
+      >
+        <Button href="#experience" class="hero-cta">
+          View experience
+          <svg
+            aria-hidden="true"
+            class="size-4"
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path d="M12 5v14"></path>
+            <path d="m19 12-7 7-7-7"></path>
+          </svg>
+        </Button>
+        <Button
+          href={calendly}
+          variant="secondary"
+          external
+          class="hero-cta hero-cta-secondary"
+        >
+          Get in touch
+          <svg
+            aria-hidden="true"
+            class="size-4"
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path d="M8 2v4"></path>
+            <path d="M16 2v4"></path>
+            <rect width="18" height="18" x="3" y="4" rx="2"></rect>
+            <path d="M3 10h18"></path>
+          </svg>
+        </Button>
+      </div>
+
+      <p class="hero-line hero-line-7 mt-5">
+        <a
+          href={profile.resume}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="hero-resume inline-flex items-center gap-1.5 text-sm text-ink-muted link-underline hover:text-sage"
+        >
+          <svg
+            aria-hidden="true"
+            class="size-3.5"
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path
+              d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"
+            ></path>
+            <path d="M14 2v4a2 2 0 0 0 2 2h4"></path>
+            <path d="M10 9H8"></path>
+            <path d="M16 13H8"></path>
+            <path d="M16 17H8"></path>
+          </svg>
+          Download resume
+        </a>
+      </p>
+    </div>
+  </Container>
+
+  <div
+    aria-hidden
+    class="hero-scroll pointer-events-none absolute inset-x-0 bottom-6 flex justify-center sm:bottom-8"
+  >
+    <span class="hero-scroll-cue">
+      <span class="hero-scroll-line block h-10 w-px"></span>
+    </span>
+  </div>
+</section>

@@ -1,8 +1,8 @@
-import contact from '@/data/contact.json';
-import experience from '@/data/experience.json';
-import profile from '@/data/profile.json';
-import site from '@/data/site.json';
-import skills from '@/data/skills.json';
+import contact from '../../data/contact.json';
+import experience from '../../data/experience.json';
+import profile from '../../data/profile.json';
+import site from '../../data/site.json';
+import skills from '../../data/skills.json';
 
 export type Site = typeof site;
 export type Profile = typeof profile;

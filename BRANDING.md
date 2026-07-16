@@ -102,7 +102,7 @@ Apply the same quiet-luxury language with **contained** layouts:
 - Lead with the name as the brand signal in the hero
 - Use gold as light and line
 - Keep motion soft and reversible where scroll-linked
-- Match existing tokens in `app/globals.css` `@theme`
+- Match existing tokens in `src/styles/global.css` `@theme`
 
 **Don’t**
 - Repeat the hero portrait treatment or oversized name lockup below the fold
@@ -114,7 +114,7 @@ Apply the same quiet-luxury language with **contained** layouts:
 
 ## Implementation map
 
-- Tokens & motion: `app/globals.css`
+- Tokens & motion: `src/styles/global.css`
 - Hero (unique): `components/Hero.tsx` + `.hero-*` styles
 - Shared section chrome: `components/Section.tsx`, `SectionHeading.tsx`, `.brand-*` / section utilities
 - Content: `data/*.json`

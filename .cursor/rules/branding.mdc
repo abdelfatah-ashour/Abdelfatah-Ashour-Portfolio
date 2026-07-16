@@ -13,4 +13,4 @@ Follow [BRANDING.md](../../BRANDING.md) for all visual and motion work.
 - **Hero stays unique:** full-bleed portrait, oversized name lockup, `--hero` exit parallax, ken-burns — do not reuse in body sections
 - **Body sections:** contained layouts, gold eyebrow + display title, soft washes, entry reveals only
 - Prefer CSS-only motion; honor `prefers-reduced-motion`
-- Extend existing tokens in `app/globals.css`; update `BRANDING.md` if the system changes
+- Extend existing tokens in `src/styles/global.css`; update `BRANDING.md` if the system changes

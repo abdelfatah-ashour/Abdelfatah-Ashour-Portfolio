@@ -1,0 +1,37 @@
+---
+import About from '@/components/About.astro';
+import ContactSection from '@/components/Contact.astro';
+import ExperienceSection from '@/components/Experience.astro';
+import Footer from '@/components/Footer.astro';
+import Header from '@/components/Header.astro';
+import Hero from '@/components/Hero.astro';
+import SkillsSection from '@/components/Skills.astro';
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import {
+  getContact,
+  getExperience,
+  getProfile,
+  getSite,
+  getSkills,
+} from '@/lib/data';
+
+const site = getSite();
+const profile = getProfile();
+const contact = getContact();
+const experience = getExperience();
+const skills = getSkills();
+---
+
+<BaseLayout>
+  <div class="page-frame">
+    <Header name={profile.name} />
+    <main id="main">
+      <Hero profile={profile} calendly={contact.calendly} />
+      <About profile={profile} />
+      <ExperienceSection experience={experience} />
+      <SkillsSection skills={skills} />
+      <ContactSection contact={contact} />
+    </main>
+  </div>
+  <Footer site={site} contact={contact} />
+</BaseLayout>

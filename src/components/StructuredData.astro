@@ -1,0 +1,37 @@
+---
+import JsonLd from '@/components/JsonLd.astro';
+import type { Profile, Site } from '@/lib/data';
+
+interface Props {
+  site: Site;
+  profile: Profile;
+}
+
+const { site, profile } = Astro.props;
+
+const person = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  name: profile.name,
+  jobTitle: profile.occupation,
+  url: site.siteUrl,
+  email: site.email,
+  image: `${site.siteUrl}${profile.avatar}`,
+  sameAs: [site.github, site.twitter, site.linkedin, site.facebook, site.youtube],
+};
+
+const website = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  name: site.title,
+  url: site.siteUrl,
+  description: site.description,
+  author: {
+    '@type': 'Person',
+    name: profile.name,
+  },
+};
+---
+
+<JsonLd data={person} />
+<JsonLd data={website} />
